@@ -1,3 +1,3 @@
-export type HeaderSectionProps = {
+export type MainSectionProps = {
     children?: React.ReactNode;
 }

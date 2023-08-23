@@ -1,8 +1,7 @@
-import React from 'react'
 import * as T from './types'
 
 export default function MainSection({ children }: T.MainSectionProps) {
   return (
-    <div>{children}</div>
+    <>{children}</>
   )
 }
