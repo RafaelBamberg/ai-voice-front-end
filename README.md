@@ -1,27 +1,77 @@
-# React + TypeScript + Vite
+![IA VOICE](https://github.com/Diogolima-creator/EnsinaGame/assets/62246037/7b097667-9e33-4f09-a42a-28241429fd78)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to start
+  
+#### git clone (https://github.com/RafaelBamberg/ai-voice-front-end.git)
 
-Currently, two official plugins are available:
+#### npm install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### npm run dev
+  
 
-## Expanding the ESLint configuration
+## Documents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### < Pages >
 
-- Configure the top-level `parserOptions` property like this:
+#### Pages
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- HOME
+- REGISTER 
+- MODELS
+- MODEL
+- TUTORIAL
+- ABOUT 
+- PLANS
+- FORGOT PASSWORD 
+- MODAL LOGIN  
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+#### Templates
+
+- HOME =>  HEADER / MAIN / FOOTER 
+- REGISTER =>  HEADER / MAIN / FOOTER 
+- MODELOS => HEADER / MAIN / FOOTER -
+- MODELO => HEADER / MAIN / FOOTER 
+- TUTORIAL =>  HEADER / MAIN / FOOTER 
+- SOBRE =>  HEADER / MAIN / FOOTER 
+- PLANOS =>  HEADER / MAIN / FOOTER 
+- FORGOT PASSWORD =>  HEADER / MAIN / FOOTER 
+- MODAL-LOGIN =>  MAIN 
+
+### < Styles >
+  
+####  GlobalStyles
+
+- bc => backgroundColor
+- m => margin
+- p => padding
+- fs => fontSize
+- ff => fontFamily
+- fw => fontWeight
+
+#### Components-GlobalStyles
+
+Paragraph like a  < p /> in html
+Container like a < div /> in html
+Icon like a < img /> in html 
+
+#### Container-Props
+
+- bc => backgroundColor
+- width => width
+- height => height
+
+#### Paragraph-Props:
+
+- m => margin
+- p => padding
+- fs => fontSize
+- ff => fontFamily
+- fw => fontWeight
+- cursor => cursor
+
+#### Icon-Props
+- width => width
+- height => height
+- m => margin
+
+
