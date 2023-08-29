@@ -23,4 +23,10 @@ export const Icon = styled.img<T.IconType>`
   width: ${props => props.width};
   height: ${props => props.height}; 
   margin: ${props => props.m};
+  cursor: ${props => props.cursor};
+  transition:.2s;
+
+  &:hover{
+    opacity:.7;
+  }
 `;

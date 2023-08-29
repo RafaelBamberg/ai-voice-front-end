@@ -17,4 +17,7 @@ export type IconType = {
   width?: string 
   height?: string
   m?: string
+  cursor?: string
+  border?: string
+  color?: string
 }
