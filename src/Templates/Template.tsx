@@ -5,9 +5,9 @@ import MainSection from '../Components/Sections/MainSection/MainSection'
 
 
 
-export default function Template({footerSection, headerSection, mainSection, backgroundColor}: T.TemplateProps) {
+export default function Template({footerSection, headerSection, mainSection, bc}: T.TemplateProps) {
   return (
-    <div style={{ width: '100vw', height: '100vh', display:'flex', flexDirection:'column', background: backgroundColor}}>
+    <div style={{ width: '100vw', height: '200vh', display:'flex', flexDirection:'column', backgroundColor: bc}}>
         <HeaderSection {...headerSection}/>
         <MainSection {...mainSection}/>
         <FooterSection {...footerSection}/>

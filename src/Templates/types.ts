@@ -6,5 +6,5 @@ export type TemplateProps = {
     footerSection: FooterSectionProps;
     mainSection: MainSectionProps;
     headerSection: HeaderSectionProps;
-    backgroundColor?: string;
+    bc?: string;
 }
