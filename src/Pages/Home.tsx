@@ -1,15 +1,17 @@
-import Template from '../Templates/Template'
+import Template from '../Templates/TemplateLong'
 import * as G from '../GlobalStyles/styles'
 import * as H from '../PagesStyles/Home/styles'
 import { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getThemeDark, setThemeDark } from '../https/Cookies';
+import { LoadingPage } from '../Components/Loadings/LoadingPage/LoadingPage';
 
 
 const Home = () => {
 
   const [toggleDropDown, setToggleDropDown] = useState(false)
   const [toggleInputFocus, setToggleInputFocus] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [toggleDarkTheme, setToggleDarkTheme] = useState(getThemeDark())
   const [searchValue, setSearchValue] = useState('')
   const navigate = useNavigate()
@@ -101,14 +103,17 @@ const Home = () => {
     }
   }, [])
   
+  setTimeout((()=>setLoading(false)), 5000)
+
   return (
+    !loading ? 
         <Template
           bc={toggleDarkTheme ? 'grey' : '#f5f5f5'}
           headerSection={{ children: 
           <G.Container z='100' position='fixed' jc='center' ai='center' bc={toggleDarkTheme ? 'rgba(0,0,0, 1)' : '#f5f5f5'} width='100vw' height='85px'>
-            <G.Header>
+            <G.Header jc='space-between' ai='center'>
               <G.HeaderLogo>
-                <G.LogoImage width='60px' height='60px' src='https://github-production-user-asset-6210df.s3.amazonaws.com/62246037/264488047-15dc838c-1428-49a2-9ad9-2bf07bedfd19.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230830%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230830T222928Z&X-Amz-Expires=300&X-Amz-Signature=eecc3aed25b7498405674acd282e1af1f6764b0c3f0fd1830cbc8f81422db170&X-Amz-SignedHeaders=host&actor_id=62246037&key_id=0&repo_id=680557063' />
+                <G.LogoImage width='60px' height='60px' src='./icon.svg' />
                 <G.Paragraph color={toggleDarkTheme ? 'white' : 'black'} cursor='default' fw='200' ff='Raleway, sans-serif' fs='38px' m='0 20px'>VoiceIA</G.Paragraph>
               </G.HeaderLogo>
               <G.HeaderSearchModels toggleDarkTheme={toggleDarkTheme} toggleInputFocus={toggleInputFocus} className='Search'>
@@ -147,7 +152,7 @@ const Home = () => {
           </G.Container> 
           }}
           mainSection={{ children: 
-          <G.Container z='99' fd='column' mt='85px' ai='center' jc='start' bc={toggleDarkTheme ? 'rgba(0,0,0, .85)' : 'radial-gradient(ellipse at center, rgba(255,255,255,1), rgba(0,0,0,0.15));'} width='100%' height='85%'>
+          <G.Container z='99' fd='column' mt='85px' ai='center' jc='start' bc={toggleDarkTheme ? 'rgba(0,0,0, .85)' : 'radial-gradient(ellipse at center, rgba(255,255,255,1), rgba(0,0,0,0.15));'} width='100%' height='86%'>
             <H.SubHeader toggleDarkTheme={toggleDarkTheme}>
               <G.Paragraph color={toggleDarkTheme ? 'white' : 'black'} m='8px 0px 0px 0px' fs='38px' fw='bold' ff='Raleway'>
                 <H.Span>[</H.Span>Experimente nossos modelos <H.Span>]</H.Span>
@@ -229,6 +234,7 @@ const Home = () => {
               </G.FooterBottom>
             </G.Footer>
           </G.Container> }}/>
+    : <LoadingPage />
   )
 }
 

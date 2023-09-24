@@ -13,6 +13,7 @@ export const Container = styled.div<T.ContainerType>`
   margin-top:${props => props.mt};
   z-index:${props => props.z};
   transition: .2s;
+  border-top: ${props => props.bt};
 `;
 
 export const Paragraph = styled.p<T.ParagraphType>`
@@ -53,7 +54,7 @@ export const Button = styled.button<T.ButtonType>`
   width:${props => props.width};
   height:${props => props.height};
 
-  & {
+  &{
     background-position: center;
     transition: background .7s;
   }
@@ -69,6 +70,18 @@ export const Button = styled.button<T.ButtonType>`
     transition: background 0s;
   }
 
+  &:disabled {
+    background-color: grey;
+    opacity:.5;
+    background-size: 100%;
+    transition: background 0s;
+
+    &:hover{
+      background: grey;
+      opacity:.4;
+      transition: 1s;
+    }
+  }
 `;
 
 export const LinkHref = styled.a<T.LinkHrefType>`
@@ -87,11 +100,11 @@ export const LinkHref = styled.a<T.LinkHrefType>`
   }
 `;
 
-export const Header = styled.div`
+export const Header = styled.div<T.HeaderType>`
   display:flex;
-  align-items:center;
+  align-items:${props => props.ai};
   width:80%; 
-  justify-content:space-between; 
+  justify-content:${props => props.jc}; 
   height:100%;
 `;
 
@@ -289,4 +302,11 @@ export const FooterBottom = styled.div<T.FooterBottomType>`
   justify-content:center;
   width:100%;
   border-top: ${props => props.bt};
+`;
+
+export const SubHeader = styled.div`
+  width:80%;
+  height:8%;
+  display:flex;
+  align-items:end;
 `;

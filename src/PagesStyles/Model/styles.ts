@@ -1,13 +1,6 @@
 import { styled } from "styled-components";
 import * as T from './types'
 
-export const SubHeader = styled.div`
-  width:80%;
-  height:8%;
-  display:flex;
-  align-items:end;
-`;
-
 export const Model = styled.div`
   width:80%;
   height:80%;
