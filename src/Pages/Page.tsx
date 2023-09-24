@@ -1,9 +1,9 @@
-import Template from '../Templates/Template'
+import TemplateLong from '../Templates/TemplateLong'
 
 export function Page() {
   return (
     <div>
-        <Template 
+        <TemplateLong 
         footerSection={{children: <div>Footer</div>}} 
         mainSection={{ children: undefined }} 
         headerSection={{ children: undefined }}/>

@@ -8,7 +8,7 @@ export type ContainerType = {
   mt?: string
   fd?: string
   z?: string
-  
+  bt?: string 
 }
 
 export type LogoImagemType = {
@@ -84,4 +84,13 @@ export type FooterMenuItemType = {
 
 export type FooterBottomType = {
   bt: string
+}
+
+export type HeaderType  = {
+  ai?: string 
+  jc?: string
+}
+
+export type ToggleDarkThemeType  = {
+  toggleDarkTheme: boolean
 }
